@@ -65,36 +65,6 @@ body {
   box-shadow: 0 0 8px var(--lime-glow);
 }
 
-/* ── ANNOUNCEMENT BAR ─────────────────────────────────────── */
-.announce-bar {
-  background: linear-gradient(90deg, rgba(157,238,115,0.08), rgba(0,212,255,0.06), rgba(157,238,115,0.08));
-  border-bottom: 1px solid var(--border);
-  padding: 9px 0;
-  text-align: center;
-  font-size: 13px;
-  color: var(--w80);
-  position: relative;
-  overflow: hidden;
-}
-.announce-bar::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(157,238,115,0.04) 50%, transparent 100%);
-  animation: sweepShine 4s ease-in-out infinite;
-}
-.announce-bar span { position: relative; }
-.announce-bar strong { color: var(--lime); }
-.announce-dot {
-  display: inline-block;
-  width: 7px; height: 7px;
-  background: var(--lime);
-  border-radius: 50%;
-  margin-right: 8px;
-  vertical-align: middle;
-  box-shadow: 0 0 8px var(--lime);
-  animation: pulseDot 2s infinite;
-}
 
 /* ── NAVBAR ───────────────────────────────────────────────── */
 .navbar {
@@ -1289,7 +1259,6 @@ body {
 
 /* ── TABLET (max 900px) ───────────────────────────────────── */
 @media (max-width: 900px) {
-  .announce-bar { font-size: 12px; padding: 8px 16px; }
   .nav-links { display: none; }
   .problem-inner { grid-template-columns: 1fr; gap: 20px; text-align: center; }
   .problem-arrow { transform: rotate(90deg); }
@@ -1323,7 +1292,6 @@ body {
 
 /* ── MOBILE (max 600px) ───────────────────────────────────── */
 @media (max-width: 600px) {
-  .announce-bar { font-size: 11.5px; padding: 7px 12px; }
   .container { padding: 0 18px; }
   .section { padding: 60px 0; }
   .section-title { margin-bottom: 40px; letter-spacing: -1.2px; }
