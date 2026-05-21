@@ -16,12 +16,31 @@
 </head>
 <body>
 
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce-bar">
+    <span>
+      <span class="announce-dot"></span>
+      Live across Maharashtra &nbsp;·&nbsp;
+      <strong>600+ pumps</strong> tracked in real time &nbsp;·&nbsp;
+      <strong>80,000+</strong> drivers trust us every day
+    </span>
+  </div>
+
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <div class="nav-brand">
+      <a href="#" class="nav-brand">
         <img src="logo.jpeg" alt="CNG Margdarshak Logo" class="nav-logo" />
         <span class="nav-title">CNG Margdarshak</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it Works</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#coverage">Coverage</a>
       </div>
       <a href="https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-primary nav-cta">
         Download App
@@ -31,9 +50,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg-glow glow-1"></div>
-    <div class="hero-bg-glow glow-2"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-mesh"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
     <div class="container hero-inner">
+
+      <!-- LEFT TEXT -->
       <div class="hero-text">
         <div class="hero-badge">
           <span class="badge-dot"></span>
@@ -48,9 +71,10 @@
         </p>
         <div class="hero-actions">
           <a href="https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-primary btn-large">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.18-7.03-2.59-2.6-10.65 9.48zM.5 1.4C.19 1.73 0 2.22 0 2.84v18.32c0 .62.19 1.11.51 1.44l.08.07 10.26-10.26v-.24L.58 1.33.5 1.4zM19.87 10.06l-2.91-1.68-2.89 2.89 2.9 2.89 2.91-1.68c.83-.48.83-1.96-.01-2.42zM4.24.09L16.42 7.1l-2.59 2.59L3.18.2C3.52.11 3.9.16 4.24.09z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.18-7.03-2.59-2.6-10.65 9.48zM.5 1.4C.19 1.73 0 2.22 0 2.84v18.32c0 .62.19 1.11.51 1.44l.08.07 10.26-10.26v-.24L.58 1.33.5 1.4zM19.87 10.06l-2.91-1.68-2.89 2.89 2.9 2.89 2.91-1.68c.83-.48.83-1.96-.01-2.42zM4.24.09L16.42 7.1l-2.59 2.59L3.18.2C3.52.11 3.9.16 4.24.09z"/></svg>
             Get it on Google Play
           </a>
+          <a href="#features" class="btn-outline">See Features</a>
         </div>
         <div class="hero-trust">
           <div class="trust-avatars">
@@ -59,16 +83,16 @@
             <div class="avatar">🚙</div>
             <div class="avatar">🚌</div>
           </div>
-          <span class="trust-text">Trusted by <strong>30,000+</strong> CNG drivers across Maharashtra</span>
+          <span class="trust-text">Trusted by <strong>80,000+</strong> CNG drivers across Maharashtra</span>
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-num">30,000+</span>
+            <span class="stat-num" data-count="80000" data-suffix="+">80,000+</span>
             <span class="stat-label">Downloads</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
-            <span class="stat-num">400+</span>
+            <span class="stat-num" data-count="600" data-suffix="+">600+</span>
             <span class="stat-label">CNG Pumps</span>
           </div>
           <div class="stat-divider"></div>
@@ -78,25 +102,43 @@
           </div>
         </div>
       </div>
+
+      <!-- RIGHT PHONE MOCKUP -->
       <div class="hero-visual">
+        <div class="phone-orbit">
+          <div class="orbit-dot"></div>
+        </div>
         <div class="phone-wrap">
           <div class="phone-frame">
+            <div class="phone-notch">
+              <div class="notch-mic"></div>
+              <div class="notch-cam"></div>
+            </div>
             <div class="phone-screen">
               <div class="mock-header">
-                <div class="mock-title">🌿 CNG मार्गदर्शक</div>
-                <div class="mock-sub">Nearby Pumps · Maharashtra</div>
+                <div class="mock-header-left">
+                  <div class="mock-title">🌿 CNG मार्गदर्शक</div>
+                  <div class="mock-sub">Nearby Pumps · Maharashtra</div>
+                </div>
+                <div class="mock-status-dot"></div>
               </div>
               <div class="mock-map">
-                <div class="map-pin pin-green">
-                  <span class="pin-dot"></span>
-                </div>
-                <div class="map-pin pin-red" style="top:38%;left:60%">
-                  <span class="pin-dot red"></span>
-                </div>
-                <div class="map-pin pin-amber" style="top:62%;left:35%">
-                  <span class="pin-dot amber"></span>
-                </div>
                 <div class="map-grid"></div>
+                <div class="map-road-h"></div>
+                <div class="map-road-v"></div>
+                <div class="map-pin">
+                  <div class="pin-pulse"></div>
+                  <div class="pin-head green"></div>
+                  <div class="map-pin-needle"></div>
+                </div>
+                <div class="map-pin-2">
+                  <div class="pin-head red"></div>
+                  <div class="map-pin-needle" style="border-top-color:#EF4444"></div>
+                </div>
+                <div class="map-pin-3">
+                  <div class="pin-head amber"></div>
+                  <div class="map-pin-needle" style="border-top-color:#F59E0B"></div>
+                </div>
               </div>
               <div class="mock-cards">
                 <div class="mock-card">
@@ -123,16 +165,18 @@
               </div>
             </div>
           </div>
-          <div class="phone-glow"></div>
+          <div class="phone-glow-wrap"></div>
+          <div class="phone-glow-wrap-2"></div>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- PROBLEM STATEMENT -->
   <section class="problem-section">
     <div class="container">
-      <div class="problem-inner">
+      <div class="problem-inner fade-up">
         <div class="problem-emoji">😤</div>
         <div class="problem-text">
           <h2>आप CNG पंप पर जाते हो — पंप बंद मिलता है।<br /><span class="problem-highlight">15 मिनट और पैसे दोनों बर्बाद।</span></h2>
@@ -153,20 +197,20 @@
   <div class="stats-bar">
     <div class="stats-bar-inner">
       <div class="stat-bar-item">
-        <span class="stat-bar-num">30,000+</span>
+        <span class="stat-bar-num" data-count="80000" data-suffix="+">80,000+</span>
         <span class="stat-bar-label">App Downloads</span>
       </div>
       <div class="stat-bar-item">
-        <span class="stat-bar-num">400+</span>
+        <span class="stat-bar-num" data-count="600" data-suffix="+">600+</span>
         <span class="stat-bar-label">CNG Pumps Tracked</span>
-      </div>
-      <div class="stat-bar-item">
-        <span class="stat-bar-num">200+</span>
-        <span class="stat-bar-label">Stations Live Today</span>
       </div>
       <div class="stat-bar-item">
         <span class="stat-bar-num">24/7</span>
         <span class="stat-bar-label">Real-Time Updates</span>
+      </div>
+      <div class="stat-bar-item">
+        <span class="stat-bar-num">Free</span>
+        <span class="stat-bar-label">Always Free to Use</span>
       </div>
     </div>
   </div>
@@ -177,60 +221,67 @@
       <div class="section-label">Why CNG Margdarshak</div>
       <h2 class="section-title">Everything you need.<br />Nothing you don't.</h2>
       <div class="features-grid">
-        <div class="feature-card">
+
+        <div class="feature-card fade-up">
           <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <div class="feature-card-text">
             <h3>Live IN STOCK / OUT OF STOCK</h3>
             <p>Know instantly if a pump is <strong style="color:#9DEE73">IN STOCK</strong>, <strong style="color:#FCA5A5">OUT OF STOCK</strong>, or on <strong style="color:#FCD34D">POWER CUT</strong> — before you start your engine.</p>
           </div>
         </div>
-        <div class="feature-card">
+
+        <div class="feature-card fade-up">
           <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6l9-3 9 3M3 18l9 3 9-3"/></svg>
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6l9-3 9 3M3 18l9 3 9-3"/></svg>
           </div>
           <div class="feature-card-text">
             <h3>Route-Based Pump Finder</h3>
             <p>Planning a trip? Enter your destination and see all CNG pumps along your route — so you never run out on the way.</p>
           </div>
         </div>
-        <div class="feature-card">
+
+        <div class="feature-card fade-up">
           <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <div class="feature-card-text">
             <h3>Find Nearest Pump Now</h3>
             <p>See all CNG stations near your current location on a live map, sorted by distance. One tap — nearest open pump.</p>
           </div>
         </div>
-        <div class="feature-card">
+
+        <div class="feature-card fade-up">
           <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
           <div class="feature-card-text">
             <h3>Always Up to Date</h3>
-            <p>Live data from WhatsApp groups of 400+ stations — updated continuously. What you see is what's actually open right now.</p>
+            <p>Live data from WhatsApp groups of 600+ stations — updated continuously. What you see is what's actually open right now.</p>
           </div>
         </div>
-        <div class="feature-card">
+
+        <div class="feature-card fade-up">
           <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <div class="feature-card-text">
             <h3>Works on Any Android Phone</h3>
             <p>Lightweight, fast, and smooth on all Android devices. No storage issues, no slowdowns. Works even on low-end phones.</p>
           </div>
         </div>
-        <div class="feature-card">
+
+        <div class="feature-card fade-up">
           <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           </div>
           <div class="feature-card-text">
             <h3>Expanding Across India</h3>
             <p>Starting from Maharashtra and growing state by state. We're on a mission to cover every CNG driver in India.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -240,33 +291,39 @@
     <div class="container">
       <div class="section-label">Simple as 1-2-3</div>
       <h2 class="section-title">How it works</h2>
-      <div class="steps-row">
-        <div class="step">
-          <div class="step-num">01</div>
+      <div class="steps-container">
+        <div class="steps-connector"></div>
+
+        <div class="step fade-up">
+          <div class="step-num-wrap">01</div>
           <div class="step-icon">
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <h3>Open the App</h3>
-          <p>Launch CNG Margdarshak. It detects your location automatically — no setup, no registration needed to find pumps.</p>
+          <p>Launch CNG Margdarshak. It detects your location automatically — no setup needed to find pumps.</p>
         </div>
+
         <div class="step-arrow">
           <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l8 6-8 6" stroke="#9DEE73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="step">
-          <div class="step-num">02</div>
+
+        <div class="step fade-up">
+          <div class="step-num-wrap">02</div>
           <div class="step-icon">
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <h3>See Live Pump Status</h3>
           <p>View nearby CNG stations with real-time <strong style="color:#9DEE73">IN STOCK</strong> / <strong style="color:#FCA5A5">OUT OF STOCK</strong> status on a live map.</p>
         </div>
+
         <div class="step-arrow">
           <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l8 6-8 6" stroke="#9DEE73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="step">
-          <div class="step-num">03</div>
+
+        <div class="step fade-up">
+          <div class="step-num-wrap">03</div>
           <div class="step-icon">
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
           <h3>Drive Smarter</h3>
           <p>Go only to open pumps. Save time, save fuel, and avoid frustrating queues. <strong style="color:#9DEE73">SAVE TREES • SAVE FUTURE.</strong></p>
@@ -279,9 +336,10 @@
   <section class="section testimonials-section" id="testimonials">
     <div class="container">
       <div class="section-label">What Drivers Say</div>
-      <h2 class="section-title">30,000+ drivers.<br />One less headache.</h2>
+      <h2 class="section-title">80,000+ drivers.<br />One less headache.</h2>
       <div class="testimonials-grid">
-        <div class="testimonial-card">
+
+        <div class="testimonial-card fade-up">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"पहले रोज पंप बंद मिलता था। अब घर से निकलने से पहले app check करता हूँ — सीधे open pump पर जाता हूँ। बहुत time बचता है।"</p>
           <div class="testimonial-author">
@@ -292,7 +350,8 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
+
+        <div class="testimonial-card fade-up">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"Very useful app for CNG users. Shows IN STOCK or OUT OF STOCK before I leave. Saved me from going to 3 different pumps like before. Highly recommend."</p>
           <div class="testimonial-author">
@@ -303,7 +362,8 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
+
+        <div class="testimonial-card fade-up">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"आमच्या भागात CNG पंप बंद असेल तर लगेच कळतं. वेळ आणि पेट्रोल दोन्ही वाचतं. सगळ्या CNG वाहन चालकांनी हे app वापरावं."</p>
           <div class="testimonial-author">
@@ -314,6 +374,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -321,12 +382,12 @@
   <!-- COVERAGE -->
   <section class="section coverage-section" id="coverage">
     <div class="container">
-      <div class="coverage-card">
+      <div class="coverage-card fade-up">
         <div class="coverage-left">
-          <div class="section-label" style="text-align:left;margin-bottom:12px">Our Coverage</div>
+          <div class="section-label" style="text-align:left;margin-bottom:14px">Our Coverage</div>
           <h2 class="coverage-title">Starting from<br /><span class="highlight">Maharashtra.</span><br />Built for India.</h2>
           <p class="coverage-desc">
-            CNG Margdarshak is live across Maharashtra with <span>400+</span> pumps and actively growing. Our goal — give every CNG vehicle owner in India real-time pump availability, state by state.
+            CNG Margdarshak is live across Maharashtra with <span>600+</span> pumps and actively growing. Our goal — give every CNG vehicle owner in India real-time pump availability, state by state.
           </p>
           <div class="coverage-pills">
             <span class="pill active">Maharashtra <span class="pill-check">✓ Live</span></span>
@@ -335,16 +396,12 @@
         </div>
         <div class="coverage-right">
           <div class="india-visual">
-            <div class="india-icon">
-              <svg viewBox="0 0 100 100" width="180" height="180" fill="none">
-                <circle cx="50" cy="50" r="48" stroke="rgba(157,238,115,0.2)" stroke-width="1"/>
-                <circle cx="50" cy="50" r="36" stroke="rgba(0,212,255,0.15)" stroke-width="1"/>
-                <circle cx="50" cy="50" r="22" fill="rgba(157,238,115,0.08)" stroke="rgba(157,238,115,0.3)" stroke-width="1"/>
-                <circle cx="50" cy="50" r="6" fill="#9DEE73"/>
-                <circle cx="50" cy="50" r="10" fill="rgba(157,238,115,0.3)"/>
-                <line x1="50" y1="2" x2="50" y2="98" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                <line x1="2" y1="50" x2="98" y2="50" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-              </svg>
+            <div class="india-rings">
+              <div class="india-ring"></div>
+              <div class="india-ring"></div>
+              <div class="india-ring"></div>
+              <div class="india-ring"></div>
+              <div class="india-center"></div>
             </div>
             <div class="india-label">Pan-India Expansion</div>
             <div class="india-sub">Pump by pump. City by city.</div>
@@ -357,50 +414,66 @@
   <!-- DOWNLOAD CTA -->
   <section class="section cta-section" id="download">
     <div class="container">
-      <div class="cta-card">
-        <div class="cta-glow"></div>
+      <div class="cta-card fade-up">
+        <div class="cta-mesh"></div>
         <div class="cta-trust-row">
-          <span class="cta-trust-badge">⭐ Trusted by <span>30,000+</span> drivers</span>
+          <span class="cta-trust-badge">⭐ Trusted by <strong>80,000+</strong> drivers</span>
           <span class="cta-trust-badge">🆓 Always Free</span>
-          <span class="cta-trust-badge">🔒 No Registration Needed</span>
+          <span class="cta-trust-badge">🌿 SAVE TREES • SAVE FUTURE</span>
         </div>
         <h2 class="cta-title">बंद पंप पर जाना<br /><span class="highlight">बंद करो।</span></h2>
         <p class="cta-sub">Download free. Open the app. Find the nearest IN STOCK pump. Drive smart.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-primary btn-large">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.18-7.03-2.59-2.6-10.65 9.48zM.5 1.4C.19 1.73 0 2.22 0 2.84v18.32c0 .62.19 1.11.51 1.44l.08.07 10.26-10.26v-.24L.58 1.33.5 1.4zM19.87 10.06l-2.91-1.68-2.89 2.89 2.9 2.89 2.91-1.68c.83-.48.83-1.96-.01-2.42zM4.24.09L16.42 7.1l-2.59 2.59L3.18.2C3.52.11 3.9.16 4.24.09z"/></svg>
-          Get it on Google Play — Free
-        </a>
-        <p class="cta-note">Android · Free · No ads · No registration</p>
+        <div class="cta-actions">
+          <a href="https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-primary btn-large">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.18-7.03-2.59-2.6-10.65 9.48zM.5 1.4C.19 1.73 0 2.22 0 2.84v18.32c0 .62.19 1.11.51 1.44l.08.07 10.26-10.26v-.24L.58 1.33.5 1.4zM19.87 10.06l-2.91-1.68-2.89 2.89 2.9 2.89 2.91-1.68c.83-.48.83-1.96-.01-2.42zM4.24.09L16.42 7.1l-2.59 2.59L3.18.2C3.52.11 3.9.16 4.24.09z"/></svg>
+            Get it on Google Play — Free
+          </a>
+        </div>
+        <p class="cta-note">Android · Free</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="logo.jpeg" alt="CNG Margdarshak" class="footer-logo" />
+    <div class="container">
+      <div class="footer-inner">
+
         <div>
-          <div class="footer-name">CNG Margdarshak</div>
-          <div class="footer-tagline">Know Before You Go · SAVE TREES • SAVE FUTURE</div>
+          <div class="footer-brand">
+            <img src="logo.jpeg" alt="CNG Margdarshak" class="footer-logo" />
+            <div>
+              <div class="footer-name">CNG Margdarshak</div>
+              <div class="footer-tagline">Know Before You Go</div>
+            </div>
+          </div>
+          <p class="footer-desc">Real-time CNG pump availability for India's drivers. Starting from Maharashtra, growing pan-India — pump by pump.</p>
         </div>
-      </div>
-      <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#how">How it Works</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#coverage">Coverage</a>
-        <a href="mailto:cng.margdarshak2k26@gmail.com">Contact</a>
-      </div>
-      <div class="footer-contact">
-        <a href="mailto:cng.margdarshak2k26@gmail.com" class="footer-email">
-          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          cng.margdarshak2k26@gmail.com
-        </a>
-        <a href="https://www.instagram.com/cng_margdarshak" target="_blank" rel="noopener" class="footer-instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          @cng_margdarshak
-        </a>
+
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <div class="footer-links">
+            <a href="#features">Features</a>
+            <a href="#how">How it Works</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#coverage">Coverage</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact">
+            <a href="mailto:cng.margdarshak2k26@gmail.com" class="footer-contact-link">
+              <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              cng.margdarshak2k26@gmail.com
+            </a>
+            <a href="https://www.instagram.com/cng_margdarshak" target="_blank" rel="noopener" class="footer-contact-link instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              @cng_margdarshak
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="footer-bottom">
@@ -415,22 +488,37 @@
   <div class="mobile-sticky-bar">
     <a href="https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.18-7.03-2.59-2.6-10.65 9.48zM.5 1.4C.19 1.73 0 2.22 0 2.84v18.32c0 .62.19 1.11.51 1.44l.08.07 10.26-10.26v-.24L.58 1.33.5 1.4zM19.87 10.06l-2.91-1.68-2.89 2.89 2.9 2.89 2.91-1.68c.83-.48.83-1.96-.01-2.42zM4.24.09L16.42 7.1l-2.59 2.59L3.18.2C3.52.11 3.9.16 4.24.09z"/></svg>
-      Download Free — Google Play
+      Download Free on Google Play
     </a>
   </div>
 
   <script>
+    // ── Scroll Progress Bar ──────────────────────────────────
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrolled / maxScroll * 100) + '%';
+    }, { passive: true });
 
-    // Smooth scroll
+    // ── Navbar scroll shadow ─────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // ── Smooth scroll ────────────────────────────────────────
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const el = document.querySelector(a.getAttribute('href'));
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
-    // Scroll-in animation
+    // ── Scroll-in animation ──────────────────────────────────
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -438,17 +526,45 @@
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12 });
 
-    document.querySelectorAll('.feature-card, .step, .coverage-card, .cta-card, .testimonial-card, .problem-inner').forEach(el => {
-      el.classList.add('fade-up');
+    document.querySelectorAll('.feature-card, .step, .coverage-card, .cta-card, .testimonial-card, .problem-inner, .fade-up').forEach(el => {
+      if (!el.classList.contains('fade-up')) el.classList.add('fade-up');
       observer.observe(el);
     });
 
-    // Navbar scroll shadow
-    window.addEventListener('scroll', () => {
-      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 20);
-    });
+    // ── Animated number counter ──────────────────────────────
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      if (!target) return;
+      const duration = 1800;
+      const start = performance.now();
+      const update = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        if (target >= 1000) {
+          el.textContent = current.toLocaleString('en-IN') + suffix;
+        } else {
+          el.textContent = current + suffix;
+        }
+        if (progress < 1) requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
   </script>
 </body>
 </html>
