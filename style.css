@@ -115,8 +115,8 @@ body {
 }
 .nav-links a {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--w60);
+  font-weight: 800;
+  color: var(--white);
   text-decoration: none;
   transition: color var(--transition);
 }
