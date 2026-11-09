@@ -32,7 +32,7 @@
         <a href="#testimonials">Reviews</a>
         <a href="#coverage">Coverage</a>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share" target="_blank" rel="noopener" class="btn-primary nav-cta">
+      <a href="#" id="nav-download-btn" target="_blank" rel="noopener" class="btn-primary nav-cta">
         Download App
       </a>
     </div>
@@ -588,6 +588,17 @@
     }, { threshold: 0.5 });
 
     document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+    // ── Smart Download Button (device detection) ─────────────
+    const PLAY_STORE = 'https://play.google.com/store/apps/details?id=com.cngtracker&pcampaignid=web_share';
+    const APP_STORE  = 'https://apps.apple.com/in/app/cng-%E0%A4%AE-%E0%A4%B0-%E0%A4%97%E0%A4%A6%E0%A4%B0-%E0%A4%B6%E0%A4%95/id6818232421';
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const storeUrl = isIOS ? APP_STORE : PLAY_STORE;
+
+    // Nav button
+    const navBtn = document.getElementById('nav-download-btn');
+    if (navBtn) navBtn.href = storeUrl;
   </script>
 </body>
 </html>
